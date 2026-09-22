@@ -4,8 +4,10 @@
 // Не вставляйте готовый код целиком: после каждого шага проверьте страницу.
 
 const firstCard = document.querySelector('[data-event="talk"]');
+const secondCard = document.querySelector('[data-event="workshop"]');
 const labStatus = document.querySelector("#lab-status");
 const detailsTitle = document.querySelector("#details-title");
+
 
 // 01. Уберите /* и */ вокруг обработчика, сохраните файл и нажмите
 // первую карточку. Потом переходите к заданию 02 в TASKS.md.
@@ -21,6 +23,10 @@ firstCard.addEventListener("click", () => {
     labStatus.textContent = `Повторное открытие: ${eventName}`;
   }
   detailsTitle.textContent = eventName;
+});
+
+secondCard.addEventListener("click", () => {
+  detailsTitle.textContent = "Мастерская постеров";
 });
 
 // 02–03. Вы будете постепенно менять обработчик выше: добавите
