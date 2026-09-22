@@ -7,12 +7,16 @@ const labStatus = document.querySelector("#lab-status");
 const detailsTitle = document.querySelector("#details-title");
 const detailsTime = document.querySelector("#details-time");
 const detailsDescription = document.querySelector("#details-description");
+const detailsPanel = document.querySelector(".details-panel");
 
 const cards = document.querySelectorAll(".event-card");
 const eventCount = document.querySelector("#event-count");
 eventCount.textContent = cards.length;
 
 function showEvent(card) {
+  cards.forEach((c) => c.classList.remove("event-card--selected"));
+  card.classList.add("event-card--selected");
+  detailsPanel.style.setProperty("--accent", card.dataset.accent);
   detailsTitle.textContent = card.dataset.title;
   detailsDescription.textContent = card.dataset.description; 
   detailsTime.textContent = card.dataset.time;
