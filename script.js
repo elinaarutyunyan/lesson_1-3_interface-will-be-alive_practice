@@ -8,7 +8,9 @@ const secondCard = document.querySelector('[data-event="workshop"]');
 const labStatus = document.querySelector("#lab-status");
 const detailsTitle = document.querySelector("#details-title");
 
-
+const cards = document.querySelectorAll(".event-card");
+const eventCount = document.querySelector("#event-count");
+eventCount.textContent = cards.length;
 // 01. Уберите /* и */ вокруг обработчика, сохраните файл и нажмите
 // первую карточку. Потом переходите к заданию 02 в TASKS.md.
 
